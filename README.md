@@ -1,20 +1,21 @@
-# Photography
-A jekyll website for photographers
+# Anna Greenleaf photography website
+A photography portfolio Jekyll website hosted on Github pages, forked from Ramswaroop.
 
-1. Fork this repo by hitting the `Fork` button at the top right corner.
-2. Enable github pages from the repo settings.
-3. Upload your pictures to `images/fulls` and `images/thumbs` directory. _You can do that on github.com itself or you can clone and push the images to your repo._
-4. Add your own custom domain in `CNAME` file or just remove the file if you don't own a domain and use the default domain that github provides ([yourusername].github.io/photography).
-5. Update `baseurl` field in `_config.yml` file with whatever domain you used in step 4.
-6. And that's it, your website is set. To view, go to [photography.ramswaroop.me](http://photography.ramswaroop.me) (or whatever you have in the CNAME file) and if you don't have one, you can go to [[yourusername].github.io/photography](http://yourusername.github.io/photography)
- 
-## ProTips
-I have made this as an [npm](https://www.npmjs.com) package with [gulp](http://gulpjs.com/) to __automate image resizing
-and thumbnail generation__. So if you're lazy like me then you can just do the following before you push your images to github.
+Currently connected to Cloud9, pushed from there for simple photo consolidation and changing.
 
-1. Fork and then clone the project to your computer
-2. Go inside the project `$ cd photography`
-3. Install all dependencies by `$ npm install`
-4. Copy all your pictures (possibly jpg, the largest size available, straight from your camera) and put it inside `images` directory
-5. Run `$ gulp` to resize the images and to generate thumbnails automatically
-6. Push your changes to github.com by `$ git add --all` and `$ git commit -m "a nice commit message"` and then finally `$ git push origin master`
+## Instructions to add images
+1. Go into Cloud9 IDE, download `/images/fulls` and `/images/thumbs`
+2. Add new images to `/images/fulls` folder, delete any you don't want from there
+3. Upload new `/images/fulls` folder to `/images/fulls` in Cloud9, so that it is saved there **BEFORE PROCEDING**
+4. Use Automator workflow [resize for ag] on computer to *crop images to dimensions* (scale to short side before crop) width: 512 length: empty 
+5. Upload your resized pictures to `images/thumbs` directory.
+6. Go to Cloud9 and open the terminal
+7. `git add .` in the terminal
+8. `git commit -a -m "updated images"` in terminal
+9. `git push -u origin master` to push to github master branch
+10. You're done!!
+11. If you're doing a LOT of images, you should push in batches so that the Cloud9 CPU doesn't get too overwhelmed
+
+## Custom URL
+1. CNAME file 
+2. DNS settings
