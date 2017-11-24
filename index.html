@@ -1,0 +1,72 @@
+---
+layout: default
+---
+<!-- Wrapper -->
+<div id="wrapper">
+    <!-- Header -->
+    <header id="header">
+        <h1><a href="index.html">Anna Greenleaf <strong>Photography</strong></a>&copy; {{ site.author }}, 2017. <i class="fa fa-code" aria-hidden="true"></i> with <a href="http://isabellareiff.com"><i class="fa fa-heart" aria-hidden="true"></i></a>
+        <nav>
+            <ul>
+                <li><a href="#footer" class="icon fa-info-circle">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Main -->
+    <div id="main">
+        {% for image in site.static_files %}
+            {% if image.path contains 'fulls' %}
+                <article class="thumb">
+                    <a href="{{ site.baseurl }}{{ site.image_fulls_loc }}/{{ image.name }}" class="image">
+                    <img src="{{ site.baseurl }}{{ site.image_thumbs_loc }}/{{ image.name }}" alt="" data-name="{{ image.name }}"/></a>
+                </article>
+            {% endif %}
+        {% endfor %}
+    </div>
+    <!-- Footer -->
+    <footer id="footer" class="panel">
+        <div class="inner split">
+            <div>
+                <section>
+                    <h2>Hi! My name is Anna</h2>
+                    <p>{{ site.bio }}</p>
+                </section>
+                <section>
+                    <h2>Contact</h2>
+                    <p>If you would like to shoot or have any inquiries, please let me know.</p>
+                    <h3>Email: annasgreenleaf@gmail.com</h3>
+                    <a href="mailto:annasgreenleaf@gmail.com" class="button">Get in touch</a>
+                </section>
+                <br>
+                <section>
+                    <ul class="icons">
+                        <li><a href="{{ site.social_urls.instagram }}" class="icon fa-instagram"><span
+                                class="label">Instagram</span></a>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+            <div>
+                <section>
+                    <h2>Group Exhibitions</h2>
+                        <p>Metropolitan Museum of Art - Scholastic Art and Writing Awards</p>
+                        <ul>
+                            <li>March - May 2017</li>
+                        </ul>
+                    <h2>Awards</h2>
+                    <p>Scholastic Art and Writing Awards:</p>
+                        <ul>
+                            <li>One Gold Key</li>
+                            <li>Two Silver Keys</li>
+                            <li>Four Honorable Mentions</li>
+                        </ul>
+                </section>
+            </div>
+        </div>
+    </footer>
+</div>
+<style type="text/css">
+    p {
+		margin: 0 0 0em 0;
+	}
+</style>
