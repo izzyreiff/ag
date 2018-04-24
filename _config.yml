@@ -1,5 +1,5 @@
 # Base configs
-baseurl: "http://isabellareiff.github.io/ag/"
+baseurl: "http://izzyreiff.github.io/ag/"
 image_fulls_loc: "/images/fulls"
 image_thumbs_loc: "/images/thumbs"
 google_analytics: ""
